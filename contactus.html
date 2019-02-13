@@ -80,8 +80,8 @@
                                     <li class="current-menu-item"><a href="./index.html">Home</a></li>
                                     <li><a href="./services.html">Services</a></li>
                                     <li><a href="./partners.html">Partners</a></li>
-                                    <li><a href="#">About</a></li>
-                                    
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./contactus.html">Contact</a></li>
                                    <!-- <li><a href="blog.html">blog</a></li>
                                     <li><a href="contact.html">Contact</a></li>-->
                                 </ul>
@@ -128,36 +128,43 @@
             </div><!-- .col -->
         </div><!-- .row -->
         <div class="row">
-                <div>Contact/Enquiry Form</div>
+                <div><h2> Contact/Enquiry Form</h2></div>
         </div>
         <div class="row">
            <!-- <center>-->
                 
                 <div class="alert alert-success" style="display:none"></div>
                 
-                <form id="myForm">
+                <form id="myForm" action="./insert.php" method="post">
                    <div class="form-group">
-                     <label for="name">Full Name:</label>
-                     <input type="text" class="form-control" id="fullname" name="fullname" required>
+                     <label for="name">Full Name: <span style="color:red;font-weight:bold">*</span> </label>
+                     <input type="text" class="form-control" id="fullname" name="fullname" required placeholder="full name">
                    </div>
                    <div class="form-group">
-                     <label for="email">Email:</label>
-                     <input type="email" class="form-control" id="email" name="email" required>
+                     <label for="email">Email: <span style="color:red;font-weight:bold">*</span></label>
+                     <input type="email" class="form-control" id="email" name="email" required placeholder="email">
                    </div>
                    <div class="form-group">
-                      <label for="phone">Phone:</label>
-                      <input type="text" class="form-control" id="phone" name="phone" required>
+                      <label for="phone">Phone:<span style="color:red;font-weight:bold">*</span></label>
+                      <input type="text" class="form-control" id="phone" name="phone" required placeholder="phone number">
                     </div>
                     <div class="form-group">
-                        <label for="category">Category:</label>
-                        <input type="text" class="form-control" id="phone" name="phone" required>
+                        <label for="category">Category:<span style="color:red;font-weight:bold">*</span></label>
+                        <select name="category" id="category">
+                            <option value="">--Select a Category--</option>
+                            <option value="Educatio">Educational Consult</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="Procurement">Procurement</option>
+                            <option value="Project Management">Project Management</option>
+                          </select> 
                       </div>
                       <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea rows="7" cols="20"></textarea> 
-                                            
+                        <label for="message">Message:<span style="color:red;font-weight:bold">*</span></label>
+                       <textarea rows="15" cols="20" placeholder="Your message" required name="message" id ="message"></textarea>
+                                        
                       </div>
-                   <button class="btn btn-primary" id="ajaxSubmit">Submit</button>
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <!--<input type="cancel" value="Cancel" class="btn btn-primary">-->
                  </form>
             <!--</center>-->      
         </div>
