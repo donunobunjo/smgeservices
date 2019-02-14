@@ -45,7 +45,7 @@
 		</tr>
 	<?php
 	include("./db.php");
-	$query = mysqli_query($con, "SELECT * FROM enquiry order by iden desc;");
+	$query = mysqli_query($con, "SELECT * FROM enquiry order by iden desc");
 	while ($row = mysqli_fetch_array($query)) {
 	?>
 		<tr>
